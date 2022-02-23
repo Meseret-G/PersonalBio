@@ -1,37 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './apps.scss';
+import Contact from '../components/contact/Contact';
+import Intro from '../components/intro/Intro';
+import Portfolio from '../components/portfolio/Portfolio';
+import Testimonial from '../components/testimonials/Testimonial';
+import Topbar from '../components/topbar/Topbar';
+import Works from '../components/works/Works';
 
 function Initialize() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
-
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
-
   return (
-    <div className="App">
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          type="button"
-          id="this-button"
-          className="btn btn-info"
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
+    <div className="app">
+      <Topbar />
+      <div className="sections">
+        <Intro />
+        <Portfolio />
+        <Works />
+        <Testimonial />
+        <Contact />
       </div>
-      <div>
-        <button
-          type="button"
-          id="that-button"
-          className="btn btn-primary mt-3"
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
     </div>
   );
 }
