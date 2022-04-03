@@ -8,6 +8,9 @@
     position: fixed;
     top: 0;
     z-index: 3;
+     ::-webkit-scrollbar {
+        display: none;
+    }
     .wrapper {
         padding: 10px 30px;
         display: flex;
@@ -55,6 +58,7 @@
                 background-color: $mainColor;
                 transform-origin: left;
                 transition: all 2s ease;
+  
                 }
             }
         }
